@@ -40,22 +40,9 @@ class MainActivityViewModelTest {
     @Mock
     private lateinit var getAllStocksUseCase: GetAllStocksUseCase
 
-
-   /* lateinit var getAllStocksUseCase: GetAllStocksUseCase
-    lateinit var mainActivityViewModel: MainActivityViewModel
-
-    @Mock
-    lateinit var mockStockRepository: StockRepository
-
-    private val mainThreadSurrogate = newSingleThreadContext("UI Thread")*/
-
     @Before
     fun setUp() {
         MockitoAnnotations.initMocks(this)
-        /*Dispatchers.setMain(mainThreadSurrogate)
-        MockitoAnnotations.initMocks(this)
-        getAllStocksUseCase = GetAllStocksUseCase(mockStockRepository)
-        mainActivityViewModel = MainActivityViewModel(getAllStocksUseCase)*/
     }
 
     @Test
