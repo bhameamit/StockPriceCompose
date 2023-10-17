@@ -4,9 +4,9 @@ import android.util.Log
 import androidx.compose.runtime.mutableStateListOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.stocks.stockpricecompose.domain.common.BaseResult
-import com.stocks.stockpricecompose.domain.stocks.entity.StockEntity
-import com.stocks.stockpricecompose.domain.stocks.usecase.GetAllStocksUseCase
+import com.stocks.datalayer.data.model.StockEntity
+import com.stocks.datalayer.data.utils.network.BaseResult
+import com.stocks.domainlayer.usecase.GetAllStocksUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch

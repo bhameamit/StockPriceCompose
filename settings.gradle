@@ -14,3 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "StockPriceCompose"
 include ':app'
+include ':datalayer'
+include ':domainlayer'

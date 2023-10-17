@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
 }
 
@@ -10,16 +10,11 @@ android {
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.stocks.stockpricecompose"
         minSdk 21
         targetSdk 34
-        versionCode 1
-        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary true
-        }
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -51,7 +46,6 @@ android {
 dependencies {
 
     implementation project(path: ':datalayer')
-    implementation project(path: ':domainlayer')
 
     implementation 'androidx.core:core-ktx:1.7.0'
 

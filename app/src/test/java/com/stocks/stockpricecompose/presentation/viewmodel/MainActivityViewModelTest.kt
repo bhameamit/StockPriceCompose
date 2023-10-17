@@ -1,13 +1,12 @@
 package com.stocks.stockpricecompose.presentation.viewmodel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import com.stocks.stockpricecompose.data.stock.utils.DataResponse
-import com.stocks.stockpricecompose.data.stock.utils.MetaResponse
-import com.stocks.stockpricecompose.data.stock.utils.StockResponse
-import com.stocks.stockpricecompose.domain.common.BaseResult
-import com.stocks.stockpricecompose.domain.stocks.entity.StockEntity
-import com.stocks.stockpricecompose.domain.stocks.interfaces.StockRepository
-import com.stocks.stockpricecompose.domain.stocks.usecase.GetAllStocksUseCase
+import com.stocks.datalayer.data.model.DataResponse
+import com.stocks.datalayer.data.model.MetaResponse
+import com.stocks.datalayer.data.model.StockEntity
+import com.stocks.datalayer.data.model.StockResponse
+import com.stocks.datalayer.data.utils.network.BaseResult
+import com.stocks.domainlayer.usecase.GetAllStocksUseCase
 import com.stocks.stockpricecompose.presentation.viewmodel.utils.TestCoroutineRule
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -60,7 +59,6 @@ class MainActivityViewModelTest {
                 .invoke()
             val viewModel = MainActivityViewModel(getAllStocksUseCase)
             verify(getAllStocksUseCase).invoke()
-
         }
     }
 }
