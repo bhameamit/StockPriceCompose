@@ -13,7 +13,9 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.newSingleThreadContext
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.setMain
+import org.junit.After
 
 import org.junit.Before
 import org.junit.Rule
@@ -58,7 +60,8 @@ class MainActivityViewModelTest {
                 .`when`(getAllStocksUseCase)
                 .invoke()
             val viewModel = MainActivityViewModel(getAllStocksUseCase)
-            verify(getAllStocksUseCase).invoke()
+            viewModel.fetchAllStocks()
+            verify(getAllStocksUseCase)
         }
     }
 }
