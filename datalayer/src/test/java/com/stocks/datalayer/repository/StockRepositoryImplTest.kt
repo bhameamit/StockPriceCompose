@@ -19,6 +19,7 @@ import org.junit.Test
 import org.junit.rules.TestRule
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
+import org.mockito.InjectMocks
 import org.mockito.Mock
 import org.mockito.Mockito
 import org.mockito.MockitoAnnotations
@@ -36,6 +37,9 @@ class StockRepositoryImplTest {
     @Mock
     private lateinit var stockAPI: StockAPI
 
+    @InjectMocks
+    private lateinit var stockRepositoryImpl: StockRepositoryImpl
+
     @Before
     fun setUp() {
         MockitoAnnotations.initMocks(this)
@@ -52,9 +56,9 @@ class StockRepositoryImplTest {
             Mockito.doReturn(stocks)
                 .`when`(stockAPI)
                 .getAllStocks()
-            val stockRepositoryImpl = StockRepositoryImpl(stockAPI)
+            stockRepositoryImpl = StockRepositoryImpl(stockAPI)
             stockRepositoryImpl.getAllStocks()
-            Mockito.verify(stockAPI)
+            Mockito.verify(stockAPI).getAllStocks()
 
         }
     }
