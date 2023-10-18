@@ -1,4 +1,4 @@
-package com.stocks.stockpricecompose
+package com.stocks.stockpricecompose.presentation.ui.activity
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import com.stocks.stockpricecompose.R
 import com.stocks.stockpricecompose.ui.theme.MainUi
 import com.stocks.stockpricecompose.presentation.ui.theme.StockPriceComposeTheme
 import dagger.hilt.android.AndroidEntryPoint
