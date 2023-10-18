@@ -17,8 +17,10 @@ import androidx.compose.ui.Alignment.Companion.TopEnd
 import androidx.compose.ui.Alignment.Companion.TopStart
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.stocks.stockpricecompose.R
 import com.stocks.stockpricecompose.presentation.viewmodel.MainActivityViewModel
 
 @Composable
@@ -39,7 +41,7 @@ fun StockList() {
                         .border(2.dp, Color.Gray, RoundedCornerShape(10.dp))
                         .padding(10.dp)) {
                         Text(modifier = Modifier.align(TopStart),text = list.get(index).name)
-                        Text(modifier = Modifier.align(TopEnd),text = "$" +list.get(index).price.toString())
+                        Text(modifier = Modifier.align(TopEnd),text = stringResource(R.string.dollar_sign) +list.get(index).price.toString())
                     }
 
                 }

@@ -9,6 +9,7 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.stocks.stockpricecompose.ui.theme.MainUi
 import com.stocks.stockpricecompose.presentation.ui.theme.StockPriceComposeTheme
@@ -34,13 +35,13 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+    Text(text = stringResource(R.string.app_name))
 }
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     StockPriceComposeTheme {
-        Greeting("Android")
+        Greeting("")
     }
 }

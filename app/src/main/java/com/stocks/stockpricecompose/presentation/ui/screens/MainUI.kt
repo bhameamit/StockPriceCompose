@@ -6,7 +6,9 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.stocks.stockpricecompose.R
 import com.stocks.stockpricecompose.presentation.viewmodel.MainActivityViewModel
 
 @Composable
@@ -18,7 +20,7 @@ fun MainUi() {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = {Text(text = "Stock App")},
+                title = {Text(text = stringResource(R.string.app_name))},
 
             )
         },
