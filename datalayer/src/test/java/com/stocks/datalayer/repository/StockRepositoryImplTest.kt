@@ -52,8 +52,8 @@ class StockRepositoryImplTest {
             Mockito.doReturn(stocks)
                 .`when`(stockAPI)
                 .getAllStocks()
-            val viewModel = StockRepositoryImpl(stockAPI)
-            viewModel.getAllStocks()
+            val stockRepositoryImpl = StockRepositoryImpl(stockAPI)
+            stockRepositoryImpl.getAllStocks()
             Mockito.verify(stockAPI)
 
         }
